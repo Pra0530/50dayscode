@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Person</title>
+</head>
+<body>
+    <p id="pra"></p>
+    <script>
+    let people = [
+        {
+            name: "John Doe",
+            age: 30,
+            occupation: "Software Engineer",
+        },
+        {
+            name: "suraj",
+            age: 25,
+            occupation: "Web Developer",
+        },
+        {
+            name: "Praphul",
+            age: 19,
+            occupation: "Student"
+        }
+    ];
+    document.getElementById("pra").innerHTML = people.map(p => "Name: " + p.name);
+    </script>
+</body>
+</html>
