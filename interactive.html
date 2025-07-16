@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INTERACTIVE TEXT-BOX</title>
+    <style>
+        .blurred {
+            filter: blur(3px);
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="inputField" placeholder="Type something...">
+    <span id="liveText"></span>
+    <script>
+        const input = document.getElementById('inputField');
+        const liveText = document.getElementById('liveText');
+        input.addEventListener('input', function() {
+            liveText.textContent = input.value;
+            input.style.backgroundColor = input.value ? '#e0ffe0' : '';
+        });
+        liveText.ondblclick = function() {
+            liveText.style.color = 'red';
+        };
+        input.ondblclick = function() {
+            input.style.backgroundColor = 'yellow';
+            alert('Input field was double-clicked!');
+            input.classList.add('blurred');
+        };
+    </script>
+</body>
+</html>
